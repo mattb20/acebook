@@ -12,3 +12,9 @@ def user_signs_up
     fill_in "Message", with: post
     click_button "Submit"
   end
+
+  def user_likes_a_post
+    visit "/posts"
+    click_link('like-link_1')
+  end
+
