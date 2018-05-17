@@ -12,7 +12,7 @@ end
 RSpec.describe PostsController, type: :controller do
   describe 'GET index' do
     render_views
-    it 'shows the posts in reverse chronological order' do 
+    it 'shows the posts in reverse chronological order' do
       user = User.create(email: 'example@gmail.com', password: 123456)
       PostsController.any_instance.stub(:current_user).and_return(User.first)
       save_sample_posts(user)
