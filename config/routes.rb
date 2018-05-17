@@ -4,7 +4,5 @@ Rails.application.routes.draw do
   root 'application#index'
   resources :posts
 
-
-get '/:wall_id/walls', to: 'walls#show'
-binding.pry
+  get '/:wall_id/walls', to: 'walls#show'
 end
