@@ -14,6 +14,12 @@ class PostsController < ApplicationController
     @posts = Post.order('id DESC')
   end
 
+  def like_post
+   @post_liked = Post.find(params[:post_id])
+   @post_liked.liked_by current_user
+   redirect_to posts_url
+  end
+
   private
 
   def post_params

@@ -4,13 +4,16 @@
     <div class="card-body">
       <!-- <h5 class="card-title">Card title</h5> -->
       <p class="card-text"><%="#{post.message}"%></p>
+      <div id="number_of_likes"><%=post.get_upvote.size%></div>
     </div>
     <ul class="list-group list-group-flush">
        <li class="list-group-item"><%= "#{post.user.email}"%></li>
       <li class="list-group-item"><%="#{time_ago_in_words(post.created_at)} ago"%></li>
     </ul>
     <div class="card-body">
-      <a href="#" id="like-link_<%=post.id%>">Like</a>
+      <form action="/like_post/<%=post.id%>" method="post">
+        <button type="submit" id="<%=post.id%>">Like</button>
+      </form>
       <a href="#" class="card-link">Wall</a>
     </div>
   </div>

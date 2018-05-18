@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :posts
 
   get '/:wall_id/walls', to: 'walls#show'
+  post '/like_post/:post_id', to: 'posts#like_post'
 end
