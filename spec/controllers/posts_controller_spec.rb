@@ -19,5 +19,12 @@ RSpec.describe PostsController, type: :controller do
       get :index
       expect(response.body).to have_text(/3rd post entered[\S|\s]+2nd post entered[\S|\s]+1st post entered/)
     end
+
+    it 'allows the user to like a post and show the number of times a post has been liked' do
+      user = User.create(email: 'example@gmail.com', password: 123456)
+      PostsController.any_instance.stub(:current_user).and_return(User.first)
+      liked_post = user.posts.build(message: 'post to be liked', id: 1)
+      liked_post.save
+    end
   end
 end
