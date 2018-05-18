@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   def index
     if current_user
       flash[:signed_up] = "Signup successful, welcome #{current_user.email}"
-    end 
+      redirect_to posts_url
+    end
   end
 end
