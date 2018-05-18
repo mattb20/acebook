@@ -17,6 +17,7 @@ RSpec.describe PostsController, type: :controller do
       PostsController.any_instance.stub(:current_user).and_return(User.first)
       save_sample_posts(user)
       get :index
+
       expect(response.body).to have_text(/3rd post entered[\S|\s]+2nd post entered[\S|\s]+1st post entered/)
     end
 
