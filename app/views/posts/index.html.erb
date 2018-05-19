@@ -10,8 +10,9 @@
       <li class="list-group-item"><%="#{time_ago_in_words(post.created_at)} ago"%></li>
     </ul>
     <div class="card-body">
-      <a href="#" id="like-link_<%=post.id%>">Like</a>
-      <a href="#" class="card-link">Wall</a>
+      <a href="" id="like-link_<%=post.id%>">Like</a>
+      <div id="number_of_likes">Likes: <%= "#{post.votes_for.size}"%></div>
+      <a href="" class="card-link">Wall</a>
     </div>
   </div>
   <br>
