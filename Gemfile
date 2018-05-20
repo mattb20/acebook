@@ -20,6 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'better_errors', '~> 2.1', '>= 2.1.1'
+  gem 'brakeman'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
