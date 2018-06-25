@@ -7,7 +7,7 @@ Current Travis CI Build Status
 
 Current test coverage information from CodeClimate:
 
-<a href="https://codeclimate.com/github/SamNiechcial/acebook-jspesh/test_coverage"><img src="https://api.codeclimate.com/v1/badges/412d87af8cabda3d63f9/test_coverage" /></a>
+<a href=""><img src="https://api.codeclimate.com/v1/badges/412d87af8cabda3d63f9/test_coverage" /></a>
 
 Current maintainability assessment from CodeClimate:
 
